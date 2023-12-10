@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Hanken+Grotesk:wght@700&family=Montserrat:wght@700&family=Overpass:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Hanken+Grotesk:wght@700&family=Montserrat:wght@400;700&family=Overpass:wght@700&display=swap");
 
 * {
   margin: 0;
@@ -17,7 +17,8 @@ body {
   min-height: 100vh;
 }
 
-.container {
+.container,
+.container2 {
   background: hsl(213, 19%, 18%);
   width: 420px;
   display: flex;
@@ -43,18 +44,22 @@ body {
   width: 20px;
 }
 
-.container .text {
+.container .text,
+.container2 .text {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.container .text h2 {
+.container .text h2,
+.container2 .text h2 {
   color: #fff;
+  font-weight: 600;
 }
 
-.container .text p {
-  font-size: 14px;
+.container .text p,
+.container2 .text p {
+  font-size: 15px;
   color: hsl(216, 12%, 54%);
 }
 
@@ -76,7 +81,7 @@ body {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  color: #fff;
+  color: #fff !important;
 }
 
 .container ul li button:hover {
@@ -85,8 +90,7 @@ body {
 }
 
 .container ul li button:focus {
-  background-color: #d2d2d2;
-  color: hsl(0, 0%, 100%);
+  background-color: #d3d3d3;
 }
 
 .container .submit-btn {
@@ -97,6 +101,9 @@ body {
   outline: none;
   border-radius: 40px;
   cursor: pointer;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .container button:hover {
@@ -108,20 +115,20 @@ body {
   display: none;
 }
 
-.container .imgbox {
+.container2 .imgbox {
   text-align: center;
 }
 
-.container .imgbox img {
+.container2 .imgbox img {
   height: 100px;
   width: 150px;
 }
 
-.container .rating {
+.container2 .rating {
   margin: 0 auto;
 }
 
-.container .rating p {
+.container2 .rating p {
   color: hsl(25, 97%, 53%);
   background-color: hsl(216, 12%, 54%);
   width: fit-content;
@@ -130,11 +137,23 @@ body {
   font-size: 14px;
 }
 
-.container .center {
+.container2 .center {
   text-align: center;
 }
 
 .attribution {
   margin-top: 40px;
   color: #fff;
+}
+
+@media (max-width: 522px) {
+  .container,
+  .container2 {
+    width: 370px;
+  }
+
+  .container ul li button {
+    height: 40px;
+    width: 40px;
+  }
 }
